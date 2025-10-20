@@ -40,8 +40,12 @@ jobs:
       run: npm test
       env:
         NODE_ENV: test
+        MONGODB_URI: mongodb://localhost:27017/testdb
+        JWT_SECRET: test-jwt-secret-for-ci
     
     - name: Run BDD tests (Cucumber)
       run: npm run bdd-test
       env:
         NODE_ENV: test
+        MONGODB_URI: mongodb://localhost:27017/testdb
+        JWT_SECRET: test-jwt-secret-for-ci
