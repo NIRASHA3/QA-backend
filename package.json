@@ -4,6 +4,7 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "joi": "^18.0.1",
     "jsonwebtoken": "^9.0.2",
     "mocha": "^11.7.1",
     "mongoose": "^8.17.2",
@@ -13,10 +14,13 @@
     "@cucumber/cucumber": "^12.1.0",
     "expect": "^30.0.5",
     "jest": "^30.0.5",
+    "jest-junit": "^16.0.0",
     "supertest": "^7.1.4"
   },
   "scripts": {
-    "test": "jest",
-    "bdd-test": "cucumber-js TestCases/BDD"
+    "bdd-test": "cucumber-js TestCases/BDD",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "sonar": "sonar-scanner"
   }
 }
